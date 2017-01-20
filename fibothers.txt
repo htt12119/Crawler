@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+const int mod = 10007;
+const int MAXN = 1000000 + 10;
+int ans[MAXN];
+int main()
+{
+	ans[1] = ans[2] = 1;
+	int n;
+	cin>>n;
+	for (int i = 3; i <= n; i++)
+		ans[i] = (ans[i - 1] + ans[i - 2]) % mod;
+	cout<<ans[n];
+	return 0;
+}

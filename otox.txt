@@ -1,0 +1,28 @@
+#include<cstdio>
+#include<cmath>
+#include<cstring>
+using namespace std;
+int main()
+{
+	int len, i, t;
+	long long int N = 0;
+	char w[8];
+	gets(w);
+	len = strlen(w);
+	for (i = 0; w[i] != '\0'; i++)
+	{
+		switch (w[i])
+		{
+		case'A': t = 10; break;
+		case'B': t = 11; break;
+		case'C': t = 12; break;
+		case'D': t = 13; break;
+		case'E': t = 14; break;
+		case'F': t = 15; break;
+		default:t = w[i] - '0'; break;
+		}
+		N = N + t * pow(16, len - 1 - i);
+	}
+	printf("%I64d\n", N);
+	return 0;
+}

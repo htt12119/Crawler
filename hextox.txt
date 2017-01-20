@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+void func(long long num) {
+	long long t = num / 16;
+	if (t != 0) {
+		func(t);
+		if (num % 16 >= 10) {
+			char c = (num % 16) + 55;
+			cout << c;
+		}else {
+			cout << num % 16;
+		}
+	}
+	else {
+		if (num >= 10) {
+			char c = (num % 16) + 55;
+			cout << c;
+		}
+		else {
+			cout << num;
+		}
+	}
+}
+int main() {
+	long long num = 0;
+	cin >> num;
+	func(num);
+	return 0;
+}

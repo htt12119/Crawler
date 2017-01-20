@@ -1,0 +1,12 @@
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	__int64 n;
+	cin >> n;
+	__int64 ans = (1 + n)*n >> 1;
+	printf("%I64d", ans);
+	return 0;
+}
+
